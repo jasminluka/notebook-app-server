@@ -12,6 +12,7 @@ app.use(express.json())
 
 app.use(cors())
 
+app.get('/', (req, res) => res.send('API RUNNING!'))
 app.use('/api/notes', require('./api/routes/notes'))
 app.use('/api/categories', require('./api/routes/categories'))
 
